@@ -1,0 +1,245 @@
+/* styles.css */
+body {
+  font-family: "Parkinsans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #aad4d4;
+}
+
+.chat-container {
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+/* 
+.typing-indicator {
+  margin-top: 5px;
+} */
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chat-box {
+  height: 81%;
+  overflow-y: scroll;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background-image: url("wp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-box {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  width: fit-content;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+  border-top-left-radius: 0px;
+}
+
+.bot-message::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #e0e0e0;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -10px;
+}
+
+.user-message {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+  border-top-right-radius: 0px;
+}
+
+.user-message::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #007bff;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -10px;
+  margin-right: 5px;
+}
+
+.input-container {
+  display: flex;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+}
+
+#user-input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #787676;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+#send-button {
+  padding: 9px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin: 5px;
+}
+
+#send-button:hover {
+  background-color: #0056b3;
+}
+
+.send-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header-app {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-box {
+  height: 85%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 20px 30px 10px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.contact-status {
+  width: 100%;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contact-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bottom-nav {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.bottom-nav button:hover {
+  color: #007bff;
+}
+
+#nav-button {
+  padding: 9px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  margin: -5px;
+}

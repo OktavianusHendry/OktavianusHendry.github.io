@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
   <head>
-    <title>Index</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link rel="shortcut icon" type="image/icon" href="assets/images/icon.jpg" />
-    <!-- <script defer src="../js/script.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
   </head>
 
   <body>
-    <header class="header">
-      <img src="assets/images/icon.jpg" alt="logo" class="icon" />
+    <div id="welcome-screen" class="welcome-screen chat-container">
+      <div class="header-app">
+        <div class="header-name">Chatbot</div>
+      </div>
+      <div class="contact-box">
+        <div class="contact" onclick="enterChat()">
+          <img src="mewing.jpg" alt="Profile Picture" class="contact-pic" />
+          <div class="contact-details">
+            <div class="contact-name">Bank Chatbot</div>
+            <div class="contact-status">
+              Hello! How can I assist you with your banking needs today?
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-nav">
+        <button id="nav-button" onclick="">
+          <img src="call.png" alt="Send" class="send-icon" />
+        </button>
+        <button id="nav-button" onclick="">
+          <img src="chat.png" alt="Send" class="send-icon" />
+        </button>
+        <button id="nav-button" onclick="">
+          <img src="black-settings-button.png" alt="Send" class="send-icon" />
+        </button>
+      </div>
+    </div>
 
-      <nav>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="about.php">Recent Projects</a></li>
-          <li><a href="contact.php">Hobbies</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="chat-container" id="chat-container" style="display: none">
+      <div class="profile">
+        <img src="mewing.jpg" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-details">
+          <div class="profile-name">Bank Chatbot</div>
+          <div
+            id="typing-indicator"
+            class="typing-indicator"
+            style="display: none">
+            Bank Chatbot is typing...
+          </div>
+        </div>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <div class="message bot-message">
+          Hello! How can I assist you with your banking needs today?
+        </div>
+      </div>
+      <div class="input-container">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your message here..."
+          onkeypress="sendMessage(event)" />
+        <button id="send-button" onclick="sendMessageButton()">
+          <img src="send.png" alt="Send" class="send-icon" />
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function enterChat() {
+        document.getElementById("welcome-screen").style.display = "none";
+        document.getElementById("chat-container").style.display = "block";
+      }
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>
